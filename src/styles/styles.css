@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 66px;
+  background-color: #222;
+}
+.header .logo {
+  background-image: url("../images/jCrego Logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  margin-left: 3vw;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  margin-right: 3vw;
+  padding: 1vw;
+  border-radius: 5px;
+}
+.navbar ul {
+  display: flex;
+  width: 20vw;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  margin: 0;
+  padding: 0;
+}
+.navbar li a {
+  list-style: none;
+  color: #eee;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+body {
+  margin: 0;
+}
+body a {
+  text-shadow: none;
+  color: #aaa;
+  text-decoration: none;
+  background-image: none;
+}
+body article ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body article ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #666;
+  font-weight: 100;
+}
+body hr {
+  background-color: #eee;
+}
+
+.about-content {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 960px;
+  align-content: center;
+  justify-content: space-around;
+}
+.about-content .about-text {
+  max-width: 600px;
+}
+.about-content .about-text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.about-content .about-text ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.about-content .about-skills {
+  padding-left: 50px;
+}
+
+.avatar {
+  display: flex;
+  flex-flow: row column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
+}
+.avatar .line {
+  height: 1px;
+  width: 200px;
+  background-color: #eee;
+}
+.avatar .pic {
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/profile.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+  box-shadow: 0 0 5px 1px rgba(1, 1, 1, 0.5);
+}
+
+/*# sourceMappingURL=styles.css.map */
