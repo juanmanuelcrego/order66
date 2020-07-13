@@ -7,6 +7,10 @@
   width: 100%;
   height: 66px;
   background-color: #222;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 .header .logo {
   background-image: url("../images/jCrego Logo.png");
@@ -55,7 +59,7 @@ body {
 }
 body a {
   text-shadow: none;
-  color: #aaa;
+  color: #2D9CDB;
   text-decoration: none;
   background-image: none;
 }
@@ -80,10 +84,19 @@ body hr {
   flex-flow: row wrap;
   max-width: 960px;
   align-content: center;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
 }
 .about-content .about-text {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  align-items: center;
   max-width: 600px;
+}
+.about-content .about-text h1, .about-content .about-text h2, .about-content .about-text h3, .about-content .about-text h4, .about-content .about-text h5, .about-content .about-text h6 {
+  text-align: center;
 }
 .about-content .about-text ul {
   list-style: none;
@@ -95,9 +108,6 @@ body hr {
   margin: 0;
   padding: 0;
 }
-.about-content .about-skills {
-  padding-left: 50px;
-}
 
 .avatar {
   display: flex;
@@ -106,6 +116,8 @@ body hr {
   align-items: center;
   justify-content: space-around;
   height: 120px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 .avatar .line {
   height: 1px;
@@ -113,13 +125,150 @@ body hr {
   background-color: #eee;
 }
 .avatar .pic {
-  width: 100px;
-  height: 100px;
-  background-image: url(../images/profile.jpg);
-  background-size: cover;
-  background-position: center;
   border-radius: 100%;
   box-shadow: 0 0 5px 1px rgba(1, 1, 1, 0.5);
+}
+
+.social {
+  min-width: 400px;
+  max-height: 400px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+.social .social-card {
+  margin: 0;
+  padding: 0;
+  transition: 0.2s;
+}
+.social .social-card:hover {
+  transform: translateY(5px);
+}
+
+.skills {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  align-items: center;
+}
+.skills .skills-div {
+  max-width: 360px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.contact form {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-content: center;
+  min-height: 400px;
+  min-width: 600px;
+}
+.contact form div {
+  display: flex;
+  flex-flow: column;
+}
+.contact form div label {
+  font-size: 16px;
+}
+.contact form input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.contact form input[name=message] {
+  height: 100px;
+}
+.contact form button {
+  align-self: center;
+}
+
+.jc-btn {
+  min-width: 100px;
+  max-width: 200px;
+  cursor: pointer;
+  border: 0;
+  background-color: #222;
+  color: #eee;
+  border-radius: 3px;
+  padding: 1vw;
+  font-size: 16px;
+  border-bottom: 5px solid #2D9CDB;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio {
+  display: flex;
+  flex-flow: row;
+  max-width: 600px;
+  transition: 1s;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+}
+.portfolio:hover {
+  transform: translateY(10px);
+}
+.portfolio h1, .portfolio h2, .portfolio h3, .portfolio h4 {
+  margin-top: 20px;
+  color: #eee;
+}
+.portfolio p {
+  font-size: 12pt;
+  text-align: center;
+}
+.portfolio .portfolio-card {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  align-items: center;
+  max-width: 200px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+  background-color: #111;
+  color: #eee;
+}
+.portfolio .portfolio-card .card-img {
+  margin-bottom: 10px;
+}
+.portfolio .portfolio-card .card-img Img {
+  border-radius: 2px;
+  width: 300px;
+}
+.portfolio .portfolio-card .card-codes {
+  display: flex;
+  flex-flow: row;
+  min-width: 200px;
+  max-width: 300px;
+  justify-content: center;
+}
+.portfolio .portfolio-card .card-codes Img {
+  border-radius: 100%;
+  transform: scale(0.6);
+}
+.portfolio .screen {
+  display: flex;
+  max-width: 600px;
+  max-height: 300px;
 }
 
 /*# sourceMappingURL=styles.css.map */

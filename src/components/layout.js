@@ -17,12 +17,6 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          jCrego
-          © {new Date().getFullYear()}
-          {` `}
-          <a href="https://www.instagram.com/jcrego.css">Instagram</a>
-        </footer>
       </section>
     </>
   )
