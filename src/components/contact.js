@@ -1,11 +1,10 @@
 import React from 'react'
 
 const Contact = () => (
-    <section className='contact'>
+    <section className='contact' id='contact'>
         <h2>Contacto</h2>
         <p>¿Te gustaría contratar mis servicios? Podés contactarme por el formulario de contacto
-            que verás debajo, o utilizar las redes sociales. Podés consultar acá lo referido a las
-            formas de pago de los servicios que brindo. 
+            que verás debajo, o utilizar las <a href='#social'>redes sociales</a>.
         </p>
         <form action="https://getform.io/f/c5768c19-ee19-4c46-8fec-f3af88ce6639" method="POST">
             <div>

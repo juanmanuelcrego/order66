@@ -12,6 +12,8 @@
         align-content: center
         align-items: center
         max-width: 600px
+        #link
+            text-decoration: underline
         h1, h2, h3, h4, h5, h6
             text-align: center
         ul
@@ -22,3 +24,34 @@
                 list-style: none
                 margin: 0
                 padding: 0          
+
+
+@media screen and ( min-width: 0px ) and ( max-width: 255px )
+    .about-content
+        flex-flow: column
+        .about-text
+            margin: 0
+            p, label
+                padding-left: 300px
+                padding-right: 300px
+            #link
+                padding-right: 200px
+                padding-left: 200px
+                font-size: .8rem
+                
+
+
+@media screen and ( min-width: 256px ) and ( max-width: 767px )
+    .about-content
+        flex-flow: column
+        .about-text
+            margin: 0
+            p, label
+                padding-left: 170px
+                padding-right: 170px
+            #link
+                padding-right: 90px
+                padding-left: 90px
+                
+
+    

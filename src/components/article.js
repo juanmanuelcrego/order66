@@ -10,7 +10,7 @@ const Article = () => {
     const [leerMas, setLeerMas] = useState(false)
 
     const textoCompleto =
-        <div>
+        <div className='about-text'>
             <p>
                 En la actualidad internet, las redes sociales, las páginas webs y las aplicaciones
                 tanto webs como nativas nos han brindado no solo una socialización a nivel global nunca
@@ -59,12 +59,13 @@ const Article = () => {
                 Debajo podrás ver mis <a href="#skills">Skills. </a>
                 Pero, también me gustaría que conocieras mi <a href="#portfolio">portfolio</a>,
                 además podés seguirme en mis <a href="#social">redes sociales, </a> para conocer más
-                sobre mi trabajo o <a href="#contac">contactarme </a> para contar con alguno de mis
+                sobre mi trabajo o <a href="#contact">contactarme </a> para contar con alguno de mis
                 servicios.
             </p>
+            <Skills></Skills>
         </div>
 
-    const linkMas = leerMas ? 'Leer menos <<' : 'Continuar leyendo >>'
+    const linkMas = leerMas ? 'Leer menos <<' : 'Continuar leyendo  y ver skills >>'
 
     return (
         <article className='about-content'>
@@ -74,7 +75,7 @@ const Article = () => {
 
                 <Avatar></Avatar>
 
-                <p>
+                <p id='p'>
                     Hola! mi nombre es Juan Manuel Crego Risso, tengo 29 años y soy de Buenos Aires, Argentina.
                     Trabajo como front end developer y me gustaría contarte porqué elegí el Front End no solo
                     como profesión, sino también como medio por el que expreso mi pasión, el diseño.
@@ -89,13 +90,10 @@ const Article = () => {
                         setLeerMas(!leerMas)
                     }
                 }>
-                    <button className='jc-btn'>
+                    <a href='#p' id='link'>
                         {linkMas}
-                    </button>
+                    </a>
                 </a>
-
-                <Skills></Skills>
-
 
                 <Portfolio></Portfolio>
 

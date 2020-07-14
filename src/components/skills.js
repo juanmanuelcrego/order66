@@ -158,7 +158,7 @@ const Skills = () => (
         `
     }
     render={data => (
-      <section className='skills'>
+      <section className='skills' id='skills'>
         <h2>
             Skills
         </h2>

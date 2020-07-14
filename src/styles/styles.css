@@ -22,6 +22,21 @@
   margin-left: 3vw;
 }
 
+@media screen and (min-width: 0px) and (max-width: 189px) {
+  .header {
+    flex-flow: column;
+    height: 100px;
+  }
+  .header .logo {
+    display: none;
+  }
+}
+@media screen and (min-width: 189px) and (max-width: 255px) {
+  .header {
+    flex-flow: column;
+    height: 100px;
+  }
+}
 .navbar {
   display: flex;
   flex-flow: row wrap;
@@ -33,7 +48,7 @@
 }
 .navbar ul {
   display: flex;
-  width: 20vw;
+  min-width: 20vw;
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: center;
@@ -54,6 +69,24 @@
   font-size: 0.9rem;
 }
 
+@media screen and (min-width: 0px) and (max-width: 255px) {
+  li a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 256px) and (max-width: 767px) {
+  li a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 767px) {
+  li a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
 body {
   margin: 0;
 }
@@ -95,6 +128,9 @@ body hr {
   align-items: center;
   max-width: 600px;
 }
+.about-content .about-text #link {
+  text-decoration: underline;
+}
 .about-content .about-text h1, .about-content .about-text h2, .about-content .about-text h3, .about-content .about-text h4, .about-content .about-text h5, .about-content .about-text h6 {
   text-align: center;
 }
@@ -109,6 +145,39 @@ body hr {
   padding: 0;
 }
 
+@media screen and (min-width: 0px) and (max-width: 255px) {
+  .about-content {
+    flex-flow: column;
+  }
+  .about-content .about-text {
+    margin: 0;
+  }
+  .about-content .about-text p, .about-content .about-text label {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+  .about-content .about-text #link {
+    padding-right: 200px;
+    padding-left: 200px;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 256px) and (max-width: 767px) {
+  .about-content {
+    flex-flow: column;
+  }
+  .about-content .about-text {
+    margin: 0;
+  }
+  .about-content .about-text p, .about-content .about-text label {
+    padding-left: 170px;
+    padding-right: 170px;
+  }
+  .about-content .about-text #link {
+    padding-right: 90px;
+    padding-left: 90px;
+  }
+}
 .avatar {
   display: flex;
   flex-flow: row column;
@@ -164,6 +233,21 @@ body hr {
   box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 0px) and (max-width: 189px) {
+  .skills .skills-div {
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 189px) and (max-width: 255px) {
+  .skills .skills-div {
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 256px) and (max-width: 767px) {
+  .skills .skills-div {
+    max-width: 200px;
+  }
+}
 .contact {
   display: flex;
   flex-flow: column;
@@ -197,6 +281,23 @@ body hr {
   align-self: center;
 }
 
+@media screen and (min-width: 256px) and (max-width: 420px) {
+  .contact form {
+    min-width: 10px;
+    max-width: 100px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact form div label {
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 620px) {
+  .contact form {
+    min-width: 100px;
+  }
+}
 .jc-btn {
   min-width: 100px;
   max-width: 200px;
@@ -211,6 +312,13 @@ body hr {
   box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
+.jc-btn.disabled {
+  background-color: #ccc;
+  border-bottom-color: #666;
+  color: #333;
+  cursor: default;
+}
+
 .footer {
   display: flex;
   flex-flow: column;
@@ -221,23 +329,31 @@ body hr {
 
 .portfolio {
   display: flex;
-  flex-flow: row;
-  max-width: 600px;
-  transition: 1s;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
-}
-.portfolio:hover {
-  transform: translateY(10px);
+  flex-flow: column;
+  justify-content: space-around;
+  max-width: 800px;
+  min-height: 800px;
+  margin-top: 100px;
 }
 .portfolio h1, .portfolio h2, .portfolio h3, .portfolio h4 {
   margin-top: 20px;
   color: #eee;
 }
-.portfolio p {
-  font-size: 12pt;
-  text-align: center;
+.portfolio .title-portfolio {
+  color: #222;
 }
-.portfolio .portfolio-card {
+.portfolio .card-div {
+  margin-top: 100px;
+  display: flex;
+  flex-flow: row;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+  transition: 1s;
+  background-color: #222;
+}
+.portfolio .card-div:hover {
+  transform: translateY(10px);
+}
+.portfolio .card-div .portfolio-card {
   display: flex;
   flex-flow: column;
   align-content: center;
@@ -247,28 +363,99 @@ body hr {
   background-color: #111;
   color: #eee;
 }
-.portfolio .portfolio-card .card-img {
-  margin-bottom: 10px;
+.portfolio .card-div .portfolio-card p {
+  font-size: 10pt;
+  padding: 10px;
+  text-align: center;
 }
-.portfolio .portfolio-card .card-img Img {
-  border-radius: 2px;
-  width: 300px;
-}
-.portfolio .portfolio-card .card-codes {
+.portfolio .card-div .portfolio-card .card-codes {
   display: flex;
   flex-flow: row;
   min-width: 200px;
   max-width: 300px;
   justify-content: center;
 }
-.portfolio .portfolio-card .card-codes Img {
+.portfolio .card-div .portfolio-card .card-codes Img {
   border-radius: 100%;
   transform: scale(0.6);
 }
-.portfolio .screen {
-  display: flex;
+.portfolio .card-div .screen {
+  display: block;
   max-width: 600px;
   max-height: 300px;
+  filter: grayscale(1);
+  transition: 1s;
+}
+.portfolio .card-div .screen:hover {
+  filter: grayscale(0);
+}
+.portfolio .card-div .screen Img {
+  display: block;
+  max-width: 400px;
+  max-height: 600px;
+}
+
+@media screen and (min-width: 189px) and (max-width: 255px) {
+  .portfolio {
+    max-width: 250px;
+    margin-top: 0;
+    min-width: 200px;
+  }
+  .portfolio h1, .portfolio h2, .portfolio h3, .portfolio h4 {
+    margin-top: 0;
+  }
+  .portfolio p {
+    display: none;
+  }
+  .portfolio .card-div {
+    margin-top: 20px;
+  }
+  .portfolio .card-div .portfolio-card {
+    max-width: 255px;
+  }
+  .portfolio .card-div .screen {
+    display: none;
+  }
+}
+@media screen and (min-width: 256px) and (max-width: 420px) {
+  .portfolio {
+    max-width: 420px;
+    margin-top: 30px;
+  }
+  .portfolio .about-text p {
+    min-width: 600px;
+  }
+  .portfolio h1, .portfolio h2, .portfolio h3, .portfolio h4 {
+    margin-top: 0;
+  }
+  .portfolio .card-div {
+    margin-top: 20px;
+    flex-flow: column;
+  }
+  .portfolio .card-div .portfolio-card {
+    padding: 20px;
+    max-width: 400px;
+  }
+  .portfolio .card-div .screen {
+    display: none;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 620px) {
+  .portfolio {
+    max-width: 600px;
+    margin-top: 30px;
+  }
+  .portfolio .card-div {
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  .portfolio .card-div .portfolio-card {
+    padding: 20px;
+    max-width: 200px;
+  }
+  .portfolio .card-div .screen {
+    max-width: 380px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

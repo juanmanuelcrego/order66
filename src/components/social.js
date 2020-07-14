@@ -53,7 +53,7 @@ const Social = () => (
         `
     }
     render={data => (
-      <section className='social'>
+      <section className='social' id='social'>
         <a href='https://www.facebook.com/juanmcrego' target='_blank'>
           <Img className='social-card' fixed={data.facebooklogo.childImageSharp.fixed} alt="Facebook profile" />
         </a>

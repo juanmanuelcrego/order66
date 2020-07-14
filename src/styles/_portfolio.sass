@@ -1,43 +1,111 @@
 .portfolio
     display: flex
-    flex-flow: row
-    max-width: 600px
-    transition: 01s
-    box-shadow: 0 0 10px 03px rgba(0, 0, 0, 0.4)
-    &:hover
-        transform: translateY(10px)
+    flex-flow: column
+    justify-content: space-around
+    max-width: 800px
+    min-height: 800px
+    margin-top: 100px  
     h1, h2, h3, h4
         margin-top: 20px
         color: $light-01
-    p
-        font-size: 12pt
-        text-align: center
-    .portfolio-card
+    .title-portfolio
+        color: $dark-02
+    .card-div
+        margin-top: 100px
         display: flex
-        flex-flow: column
-        align-content: center
-        align-items: center
-        max-width: 200px
+        flex-flow: row
         box-shadow: 0 0 10px 03px rgba(0, 0, 0, 0.4)
-        background-color: $dark-01
-        color: $light-01
-        .card-img
-            margin-bottom: 10px
-            Img
-                border-radius: 2px
-                width: 300px
-        .card-codes
+        transition: 01s
+        background-color: $dark-02
+        &:hover
+            transform: translateY(10px)
+        .portfolio-card
             display: flex
-            flex-flow: row
-            min-width: 200px
-            max-width: 300px
-            justify-content: center
+            flex-flow: column
+            align-content: center
+            align-items: center
+            max-width: 200px
+            box-shadow: 0 0 10px 03px rgba(0, 0, 0, 0.4)
+            background-color: $dark-01
+            color: $light-01
+            p
+                font-size: 10pt
+                padding: 10px
+                text-align: center
+            .card-codes
+                display: flex
+                flex-flow: row
+                min-width: 200px
+                max-width: 300px
+                justify-content: center
+                Img
+                    border-radius: 100%
+                    transform: scale(0.6)
+        .screen
+            display: block
+            max-width: 600px
+            max-height: 300px
+            filter: grayscale(1)
+            transition: 01s
+            &:hover
+                filter: grayscale(0)
             Img
-                border-radius: 100%
-                transform: scale(0.6)
-    .screen
-        display: flex
+                display: block
+                max-width: 400px
+                max-height: 600px
+    
+// @media screen and ( min-width: 0px ) and ( max-width: 189px )
+
+
+@media screen and ( min-width: 189px ) and ( max-width: 255px )
+    .portfolio
+        max-width: 250px
+        margin-top: 0
+        min-width: 200px
+        h1, h2, h3, h4
+            margin-top: 0
+        p
+            display: none
+        .card-div
+            margin-top: 20px
+            .portfolio-card
+                max-width: 255px
+            .screen
+                display: none
+
+@media screen and ( min-width: 256px ) and ( max-width: 420px )
+    .portfolio
+        max-width: 420px
+        margin-top: 30px
+        .about-text
+            p
+                min-width: 600px
+            
+        h1, h2, h3, h4
+            margin-top: 0
+        .card-div
+            margin-top: 20px
+            flex-flow: column
+            .portfolio-card
+                padding: 20px
+                max-width: 400px
+            .screen
+                display: none
+
+@media screen and ( min-width: 420px ) and ( max-width: 620px )
+    .portfolio
         max-width: 600px
-        max-height: 300px
-                
+        margin-top: 30px
+        .card-div
+            max-width: 600px
+            margin-top: 20px
+            .portfolio-card
+                padding: 20px
+                max-width: 200px
+            .screen
+                max-width: 380px
+
+
+
+    // ( max-width: 767px )
                     
